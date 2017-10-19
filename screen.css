@@ -36,25 +36,22 @@ li {
 #HERO {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background: #FFF;
   text-transform: uppercase;
 }
-#HERO .whitespace,
-#HERO .vcard,
+
+.vcard,
 #HERO .car-1,
 #HERO .car-2,
 #HERO .car-3 {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  width: 200px;
-  height: 600px;
-  float: left;
-  padding: 10px;
-  padding-top: 210px;
-
+  padding-top: 210px !important;
+  height: 100%;
 }
+
 #HERO .car-1 {
   background-color: #00743d;
   background-image: url("img/car-1.gif") 100%;
@@ -86,6 +83,7 @@ li {
   -webkit-transition: right 2s; /* Safari 3.1 to 6.0 */
   transition: right 2s;
 }
+
 #HERO .car-1:hover img,
 #HERO .car-2:hover img,
 #HERO .car-3:hover img {
@@ -95,15 +93,74 @@ li {
    position: absolute;
    top: 20px;
  }
+ #PARTNER {
+   background: #EEE;
+ }
+ #IMPRINT {
+   background: #DDD;
+ }
 .hr {
   clear: both;
   position: relative;
+  border: 0;
 }
-.column {
+
+
+
+.column-1 {
 	float: left;
 	position: relative;
-	display: block;
-	width: 200px;
-	padding: 5px;
+	display: inline-block;
+	width: 50%;
 	color: #666;
+  padding: 20px 10px;
+}
+
+.column-2 {
+  float: left;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	color: #666;
+  padding: 20px 10px;
+}
+
+.whitespace {
+  display: none;
+}
+
+@media only screen and (min-width: 480px) {
+  .whitespace {
+    display: none;
+  }
+  .column-1 {
+    width: 33.3%;
+  }
+  .column-2 {
+    width: 66.6%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .whitespace {
+    display: none;
+  }
+  .column-1 {
+    width: 25%;
+  }
+  .column-2 {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .whitespace {
+    display: inline-block;
+  }
+  .column-1 {
+    width: 20%;
+  }
+  .column-2 {
+    width: 40%;
+  }
 }

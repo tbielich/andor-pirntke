@@ -8,16 +8,16 @@
   </head>
 <body>
   <header id="HERO">
-    <div class="whitespace">
+    <div class="column-1 whitespace">
     </div>
-    <article id="hcard-Andor-Pirntke" class="vcard">
+    <article id="hcard-Andor-Pirntke" class="column-1 vcard">
       <p class="chef">
         <small class="org">Kaufmann</small><br />
         <span class="fn">Andor Pirntke</span><br />
       </p>
       <p>
         <a class="email" href="mailto:mail@andor-pirntke.de">mail@<br />andor-pirntke.de</a><br />
-        <span class="tel">0151-10 65 87 61</span>
+        <a class="tel" href="+49015110658761">0151-10 65 87 61</a>
       </p>
       <p class="adr">
         <span class="street-address">Lagerstrasse 1</span><br />
@@ -25,7 +25,7 @@
         <span class="locality">Rehfelde Dorf</span>
       </p>
     </article>
-    <figure class="car-1">
+    <figure class="column-1 car-1">
       <img src="img/car-1.gif" title="Einsatzfahrzeug" />
       <figcaption>
         <span title="Hersteller">VW</span><br />
@@ -33,7 +33,7 @@
         <span title="Baujahr">1990–2003</span>
       </figcaption>
     </figure>
-    <figure class="car-2">
+    <figure class="column-1 car-2">
       <img src="img/car-2.gif" title="Löschgruppenfahrzeug" />
       <figcaption>
         <span title="Hersteller">Mercedes Benz</span><br />
@@ -41,7 +41,7 @@
         <span title="Baujahr">1996–2013</span><br />
       </figcaption>
     </figure>
-    <figure class="car-3">
+    <figure class="column-1 car-3">
       <img src="img/car-3.gif" title="Rettungswagen" />
       <figcaption>
         <span title="Hersteller">Mercedes Benz</span><br />
@@ -50,18 +50,20 @@
       </figcaption>
     </figure>
   </header>
-  <hr class="hr" />
-  
-  <div id="CONTENT">
-    <div class="column">
-      <h2><a href="#CONTENT">Projekte</a></h2>
+  <section id="PARTNER">
+    <div class="column-1 whitespace">
+    </div>
+    <div class="column-1">
+      <small>Partner</small>
       <ul>
-        <li><a href="http://www.car-chief.com" target="_blank">www.car-chief.com</a></li>
+        <li><a href="http://www.danhag.de" target="_blank">danhag.de</a></li>
+        <li><a href="http://www.konsumkit.com" target="_blank">konsumkit.com</a></li>
+        <li><a href="http://www.marlonschultz.de" target="_blank">marlonschultz.de</a></li>
+        <li><a href="http://www.milachbosheit.de" target="_blank">milachbosheit.de</a></li>
       </ul>
     </div><!--.column-->
-    
-    <div class="column">
-      <h2><a href="#CONTENT">Domains</a></h2>
+    <div class="column-2">
+      <small>Domains</small>
       <ul>
         <li><a href="http://andorpirntke.de/" target="_blank">andorpirntke.de</a></li>
         <li><a href="http://car-chief.de/" target="_blank">car-chief.de</a></li>
@@ -87,25 +89,18 @@
         <li><a href="http://gsmfernsteuerung.de/" target="_blank">gsmfernsteuerung.de</a></li>
         <li><a href="http://gsmfernsteuerung.com/" target="_blank">gsmfernsteuerung.com</a></li>
       </ul>
-      
     </div><!--.column-->
-    <div class="column">
-      <h2><a href="#CONTENT">Partner</a></h2>
-      <ul>
-        <li><a href="http://www.danhag.de" target="_blank">danhag.de</a></li>
-        <li><a href="http://www.konsumkit.com" target="_blank">konsumkit.com</a></li>
-        <li><a href="http://www.marlonschultz.de" target="_blank">marlonschultz.de</a></li>
-        <li><a href="http://www.milachbosheit.de" target="_blank">milachbosheit.de</a></li>
-      </ul>
-    </div><!--.column-->
-  </div><!--CONTENT-->
-  <div id="IMPRINT">
-    <div class="column">
-      <h3>Inhaber der Seite</h3>
+  </section><!--PARTNER-->
+  <hr class="hr" />
+  <footer id="IMPRINT">
+    <div class="column-1 whitespace">
+    </div>
+    <div class="column-1">
+      <small>Inhaber der Seite</small>
       <p>
         Andor Pirntke<br/>
-        Lehderstr. 27 - 28<br/>
-        13086 Berlin<br/>
+        Lagerstrasse 1<br />
+        15345 Rehfelde Dorf<br/>
       </p>
       <p>
         mail@andor-pirntke.de
@@ -115,20 +110,17 @@
         Fax.: 030 / 96 06 93 82<br/>
       </p>
     </div>
-    <div class="column">
-      <h3>Urheberrecht</h3>
+    <div class="column-2">
+      <small>Urheberrecht</small>
       <p>
         Alle Inhalte dieser Internetseiten unterliegen dem Copyright. Die Veröffentlichung oder Verwendung von Texten und / oder Bildmaterial darf nur nach vorhergehender schriftlicher Genehmigung erfolgen.
       </p>
-    </div>
-    <div class="column">
-      <h3>Haftungsausschluss</h3>
+      <small>Haftungsausschluss</small>
       <p>
         Die Inhalte unserer Internetseiten werden mit größtmöglicher Sorgfalt zusammen-gestellt und ständig überprüft. Trotzdem kann auch uns mal ein Fehler unterlaufen. Jegliche Haftung für Schäden, die direkt oder indirekt aus der Nutzung dieser Internetseiten entstehen, schließen wir aus, soweit diese nicht auf Vorsatz oder grober Fahrlässigkeit beruhen.
       </p>
     </div>
-  </div><!--IMPRINT-->
-  
+  </footer><!--IMPRINT-->
 </body>
-
+<script src="functions.js"></script>
 </html>
