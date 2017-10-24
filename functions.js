@@ -2,11 +2,15 @@ var fullHeight = window.innerHeight + "px";
 window.addEventListener('resize', change);
 
 function change(){
-    fullHeight = window.innerHeight + "px";
-    $('#HERO').css('height', fullHeight);
-    $('#IMPRINT').css('min-height', fullHeight);
-    $('#PARTNER').css('height', fullHeight);
+    fullHeight = window.innerHeight;
+    if (fullHeight >= 768) {
+      $('#HERO').css('height', fullHeight + "px");
+      $('#IMPRINT').css('min-height', fullHeight + "px");
+      $('#PARTNER').css('height', fullHeight + "px");
+    }
 }
+
+change();
 
 // Select all links with hashes
 $('a[href*="#"]')
@@ -44,5 +48,3 @@ $('a[href*="#"]')
       }
     }
   });
-
-change();

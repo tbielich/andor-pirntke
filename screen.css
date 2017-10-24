@@ -42,11 +42,13 @@ li {
   text-transform: uppercase;
   overflow: hidden;
 }
-
+figcaption {
+  color: #FFF;
+}
 .vcard,
-#HERO .car-1,
-#HERO .car-2,
-#HERO .car-3 {
+.car-1,
+.car-2,
+.car-3 {
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -54,33 +56,24 @@ li {
   height: 100%;
 }
 
-#HERO .car-1 {
+.car-1 {
   background-color: #00743d;
-  background-image: url("img/car-1.gif") 100%;
   color: #FFF;
 }
-#HERO .car-1:after {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  border-right: 1px solid #005121;
-  content: "";
-}
-#HERO .car-2 {
+.car-2 {
   background: #b41412;
-  border-right: 1px solid #821205;
   color: #FFF;
 }
-#HERO .car-3 {
+.car-3 {
   background: #CCC;
-  border-right: 1px solid #9d9d9c;
   color: #FFF;
 }
-#HERO img {
+.car-1 img,
+.car-2 img,
+.car-3 img {
   position: absolute;
   height: 200px;
-  right: 0;
+  right: -50px;
   top: 0;
   /*
   -webkit-transition: right 2s; /* Safari 3.1 to 6.0
@@ -101,19 +94,12 @@ li {
  }
  #PARTNER {
    position: relative;
-   background: #FFF;
- }
- #PARTNER div:first-child,
- #PARTNER div:nth-child(2n) {
    background: #EEE;
  }
 
  #IMPRINT {
    position: relative;
-   background: #EEE;
- }
- #IMPRINT div:nth-child(2n) {
-   background: #FFF;
+   background: #DDD;
  }
 .hr {
   clear: both;
@@ -151,6 +137,7 @@ li {
   bottom: 40px;
   width: 100%;
   text-align: center;
+  display: none;
 }
 .scrollTo a {
   position: relative;
@@ -171,7 +158,28 @@ li {
   .whitespace {
     padding-top: 210px !important;
     height: 100%;
-    min-height: 480px;
+  }
+  #HERO .chef {
+    top: 220px;
+  }
+  
+  .car-1 img,
+  .car-2 img,
+  .car-3 img {
+    height: 400px;
+    right: -100px;
+  }
+  
+  .vcard,
+  .car-1,
+  .car-2,
+  .car-3,
+  #PARTNER .column-1,
+  #PARTNER .column-2 {
+    padding-top: 420px !important;
+  }
+  .scrollTo {
+    display: block;
   }
 }
 
