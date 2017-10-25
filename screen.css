@@ -60,13 +60,44 @@ figcaption {
   background-color: #00743d;
   color: #FFF;
 }
+
+.car-1:before {
+    content: '';
+    position: absolute ;
+    width: 100%;
+    height: 200px;
+    display: block ;
+    background: rgb(6, 80, 35);
+    top: 0;
+    left: 0;
+}
 .car-2 {
   background: #b41412;
   color: #FFF;
 }
+.car-2:before {
+    content: '';
+    position: absolute ;
+    width: 100%;
+    height: 200px;
+    display: block ;
+    background: rgb(128, 20, 13);
+    top: 0;
+    left: 0;
+}
 .car-3 {
   background: #CCC;
   color: #FFF;
+}
+.car-3:before {
+    content: '';
+    position: absolute ;
+    width: 100%;
+    height: 200px;
+    display: block ;
+    background: rgb(157, 157, 156);
+    top: 0;
+    left: 0;
 }
 .car-1 img,
 .car-2 img,
@@ -92,14 +123,20 @@ figcaption {
    position: absolute;
    top: 20px;
  }
+ #HERO small {
+   color: #b41412;
+ }
  #PARTNER {
    position: relative;
    background: #EEE;
  }
-
+#PARTNER small {
+  color: #00743d;
+}
  #IMPRINT {
    position: relative;
    background: #DDD;
+   padding-bottom: 80px;
  }
 .hr {
   clear: both;
@@ -118,7 +155,7 @@ figcaption {
 	color: #666;
   padding: 20px 10px;
 }
-
+.column-xs-2,
 .column-2 {
   float: left;
 	position: relative;
@@ -183,6 +220,9 @@ figcaption {
   }
 }
 
+#PARTNER .column-2.car-1 figcaption {
+  padding-left: 50%;
+}
 @media only screen and (min-width: 480px) {
   .whitespace {
     display: none;
@@ -203,7 +243,12 @@ figcaption {
     width: 25%;
   }
   .column-2 {
-    width: 40%;
+    width: 50%;
+  }
+  .car-1:before,
+  .car-2:before,
+  .car-3:before {
+    height: 400px;
   }
 }
 
