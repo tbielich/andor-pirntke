@@ -3,8 +3,8 @@
 * {
   box-sizing: border-box;
   font-family: 'Rajdhani', sans-serif;
-	font-size: 20px;
-  line-height: 25px;
+	font-size: 16px;
+  line-height: 20px;
 	margin: 0;
 	padding: 0;
 }
@@ -23,12 +23,9 @@ small {
     font-size: smaller;
     color: #999;
 }
-body {
-  font-size: 16px;
 
-}
 p {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 li {
 	list-style-type: none;
@@ -37,14 +34,12 @@ li {
 #HERO {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  min-height: 500px;
   background: #FFF;
   text-transform: uppercase;
   overflow: hidden;
 }
-figcaption {
-  color: #FFF;
-}
+
 .vcard,
 .car-1,
 .car-2,
@@ -52,76 +47,66 @@ figcaption {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  padding-top: 210px !important;
+  text-align: right;
   height: 100%;
 }
 
+.vcard figcaption,
+.car-1 figcaption,
+.car-2 figcaption,
+.car-3 figcaption {
+  position: relative;
+  display: block;
+  text-align: left;
+  height: 50%;
+  padding: 20px;
+  float: left;
+  width: 100%;
+}
+article {
+  padding: 20px;
+}
+
 .car-1 {
+  background: rgb(6, 80, 35);
+  color: #FFF;
+}
+.car-1 figcaption {
   background-color: #00743d;
   color: #FFF;
 }
 
-.car-1:before {
-    content: '';
-    position: absolute ;
-    width: 100%;
-    height: 200px;
-    display: block ;
-    background: rgb(6, 80, 35);
-    top: 0;
-    left: 0;
-}
 .car-2 {
+  background: rgb(128, 20, 13);
+  color: #FFF;
+}
+
+.car-2 figcaption {
   background: #b41412;
   color: #FFF;
 }
-.car-2:before {
-    content: '';
-    position: absolute ;
-    width: 100%;
-    height: 200px;
-    display: block ;
-    background: rgb(128, 20, 13);
-    top: 0;
-    left: 0;
-}
+
 .car-3 {
+  background: rgb(157, 157, 156);
+  color: #FFF;
+}
+
+.car-3 figcaption {
   background: #CCC;
   color: #FFF;
 }
-.car-3:before {
-    content: '';
-    position: absolute ;
-    width: 100%;
-    height: 200px;
-    display: block ;
-    background: rgb(157, 157, 156);
-    top: 0;
-    left: 0;
-}
+.vcard img,
 .car-1 img,
 .car-2 img,
 .car-3 img {
-  position: absolute;
-  height: 200px;
-  right: -50px;
-  top: 0;
-  /*
-  -webkit-transition: right 2s; /* Safari 3.1 to 6.0
-  transition: right 2s;
-  */
+  position: relative;
+  display: block;
+  height: 50%;
+  float: right;
 }
-
-/*
-#HERO .car-1:hover img,
-#HERO .car-2:hover img,
-#HERO .car-3:hover img {
-  right: -100%;
- }
- */
  #HERO .chef {
-   position: absolute;
-   top: 20px;
+   position: relative;
+   margin-top: -65px;
  }
  #HERO small {
    color: #b41412;
@@ -153,7 +138,7 @@ figcaption {
 	display: inline-block;
 	width: 50%;
 	color: #666;
-  padding: 20px 10px;
+  padding: 0;
 }
 .column-xs-2,
 .column-2 {
@@ -162,7 +147,7 @@ figcaption {
 	display: inline-block;
 	width: 100%;
 	color: #666;
-  padding: 20px 10px;
+  padding: 0;
 }
 
 .whitespace {
@@ -188,32 +173,19 @@ figcaption {
   border: 1px solid #CCC;
 
 }
+@media (orientation: portrait) and (max-height: 768px) {
+  .car-1,
+  .car-2,
+  .car-3 {
+    height: 50%;
+  }
+}
 @media only screen and (min-height:700px) {
   .column-1,
   .column-2,
   .vcard,
   .whitespace {
-    padding-top: 210px !important;
     height: 100%;
-  }
-  #HERO .chef {
-    top: 220px;
-  }
-  
-  .car-1 img,
-  .car-2 img,
-  .car-3 img {
-    height: 400px;
-    right: -100px;
-  }
-  
-  .vcard,
-  .car-1,
-  .car-2,
-  .car-3,
-  #PARTNER .column-1,
-  #PARTNER .column-2 {
-    padding-top: 420px !important;
   }
   .scrollTo {
     display: block;
@@ -244,11 +216,6 @@ figcaption {
   }
   .column-2 {
     width: 50%;
-  }
-  .car-1:before,
-  .car-2:before,
-  .car-3:before {
-    height: 400px;
   }
 }
 

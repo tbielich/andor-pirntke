@@ -2,12 +2,10 @@ var fullHeight = window.innerHeight + "px";
 window.addEventListener('resize', change);
 
 function change(){
-    fullHeight = window.innerHeight;
-    if (fullHeight >= 768) {
-      $('#HERO').css('height', fullHeight + "px");
-      $('#IMPRINT').css('min-height', fullHeight + "px");
-      $('#PARTNER').css('height', fullHeight + "px");
-    }
+  fullHeight = window.innerHeight;
+  $('#HERO').css('height', fullHeight + "px");
+  $('#PARTNER').css('height', fullHeight + "px");
+  $('#IMPRINT').css('min-height', fullHeight + "px");
 }
 
 change();

@@ -11,21 +11,24 @@
 <body>
   <header id="HERO">
     <div class="column-1 whitespace"></div>
-    <article id="hcard-Andor-Pirntke" class="column-1 vcard">
-      <p class="chef">
-        <small class="org">Kaufmann</small><br />
-        <span class="fn">Andor Pirntke</span><br />
-      </p>
-      <p>
-        <a class="email" href="mailto:mail@andor-pirntke.de">mail@<br />andor-pirntke.de</a><br />
-        <a class="tel" href="+49015110658761">0151-10 65 87 61</a>
-      </p>
-      <p class="adr">
-        <span class="street-address">Lagerstrasse 1</span><br />
-        <span class="postal-code">15345</span>
-        <span class="locality">Rehfelde Dorf</span>
-      </p>
-    </article>
+    <figure id="hcard-Andor-Pirntke" class="column-1 vcard">
+      <img src="img/car-0.gif" />
+        <figcaption>
+        <p class="chef">
+          <small class="org">Kaufmann</small><br />
+          <span class="fn">Andor Pirntke</span><br />
+        </p>
+        <p>
+          <a class="email" href="mailto:mail@andor-pirntke.de">mail@<br />andor-pirntke.de</a><br />
+          <a class="tel" href="+49015110658761">0151-10 65 87 61</a>
+        </p>
+        <p class="adr">
+          <span class="street-address">Lagerstrasse 1</span><br />
+          <span class="postal-code">15345</span>
+          <span class="locality">Rehfelde Dorf</span>
+        </p>
+      </figcaption>
+    </figure>
     <figure class="column-1 car-2">
       <img src="img/car-2.gif" title="Löschgruppenfahrzeug" />
       <figcaption>
@@ -48,6 +51,23 @@
     </div>
   </header>
   <section id="PARTNER">
+    <div class="column-1 whitespace"></div>
+    <div class="column-1 column-xs-2">
+      <article>
+      <small>Verkauf</small>
+      <ul>
+        <li><a href="https://home.mobile.de/A-PIRNTKE#ses" target="_blank" title="mobile.de/A-PIRNTKE">mobile.de</a></li>
+        <li><a href="https://www.ebay-kleinanzeigen.de/s-bestandsliste.html?userId=38330766" target="_blank" title="ebay-kleinanzeigen.de/userId=38330766">ebay-kleinanzeigen.de</a></li></ul>
+      </ul>
+      <br />
+      <small>Partner</small>
+      <ul>
+        <li><a href="http://www.gabors-mz-laden.de" target="_blank">gabors-mz-laden.de</a></li>
+        <li><a href="http://www.konsumkit.com" target="_blank">konsumkit.com</a></li>
+        <li><a href="http://www.car-chief.com" target="_blank">car-chief.com</a></li>
+      </ul>
+      </article>
+    </div><!--.column-->
     <figure class="column-2 car-1">
       <img src="img/car-1.gif" title="Einsatzfahrzeug" />
       <figcaption>
@@ -56,21 +76,6 @@
         <span title="Baujahr">1990–2003</span>
       </figcaption>
     </figure>
-    <div class="column-1 column-xs-2">
-      <small>Verkauf</small>
-      <ul>
-        <li><a href="https://home.mobile.de/A-PIRNTKE#ses" target="_blank" title="mobile.de/A-PIRNTKE">mobile.de</a></li>
-        <li><a href="https://www.ebay-kleinanzeigen.de/s-bestandsliste.html?userId=38330766" target="_blank" title="ebay-kleinanzeigen.de/userId=38330766">ebay-kleinanzeigen.de</a></li></ul>
-      </ul>
-    </div><!--.column-->
-    <div class="column-1 column-xs-2">
-      <small>Partner</small>
-      <ul>
-        <li><a href="http://www.gabors-mz-laden.de" target="_blank">gabors-mz-laden.de</a></li>
-        <li><a href="http://www.konsumkit.com" target="_blank">konsumkit.com</a></li>
-        <li><a href="http://www.marlonschultz.de" target="_blank">marlonschultz.de</a></li>
-      </ul>
-    </div><!--.column-->
     <hr class="hr" />
     <div class="scrollTo">
       <a href="#IMPRINT" title="Impressum">&darr;</a>
@@ -79,6 +84,7 @@
   <footer id="IMPRINT">
     <div class="column-1 whitespace"></div>
     <div class="column-1 column-xs-2">
+      <article>
       <small>Inhaber der Seite</small>
       <p>
         Andor Pirntke<br/>
@@ -96,8 +102,10 @@
         Gerichtsstand: Strausberg<br/>
         Ust-IdNr: DE217635989
       </p>
+      </article>
     </div>
     <div class="column-2">
+      <article>
       <small>Urheberrecht</small>
       <p>
         Alle Inhalte dieser Internetseiten unterliegen dem Copyright. Die Veröffentlichung oder Verwendung von Texten und / oder Bildmaterial darf nur nach vorhergehender schriftlicher Genehmigung erfolgen.
@@ -110,6 +118,7 @@
         Die Europaeische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie unter folgendem Link finden: http://ec.europa.eu/odr
       </p>
     </div>
+    </article>
     <hr class="hr" />
     <div class="scrollTo">
       <a href="#HERO" title="Impressum">&uarr;</a>
@@ -117,4 +126,13 @@
   </footer><!--IMPRINT-->
 </body>
 <script src="functions.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109676632-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109676632-1');
+</script>
+
 </html>
