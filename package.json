@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "@11ty/eleventy-img": "^0.9.0",
+    "cloudinary": "^1.25.2",
+    "dotenv": "^10.0.0",
+    "eleventy": "^1.0.6",
+    "slugify": "^1.6.3"
+  },
+  "name": "cloudinary-images",
+  "description": "",
+  "version": "1.0.0",
+  "main": ".eleventy.js",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  },
+  "scripts": {
+    "start": "eleventy --serve --watch",
+    "build": "eleventy",
+    "deploy": "eleventy && node deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tbielich/cloudinary-images.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbielich/cloudinary-images/issues"
+  },
+  "homepage": "https://github.com/tbielich/cloudinary-images#readme"
+}

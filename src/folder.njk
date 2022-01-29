@@ -1,0 +1,23 @@
+---
+pagination:
+    data: cloudinary.folders
+    size: 1
+    alias: folder
+    resolve: values
+permalink: "{{ folder.path | slugify }}/"
+layout: base-folder
+---
+<h1>{{ folder.name }}</h1>
+<div class="container">
+
+{%- for image in folder.images -%}
+{%- if image.folder == folder.path %}
+{% thumb image.secure_url, image.asset_id %}
+{# <img src="{{image.secure_url}}" alt="{{image.asset_id}}"> #}
+{# <a href="{{ image.secure_url }}" class="card">
+{% set transform_url = process.env.RES_ENDPOINT + folder.path + '/' + image.filename + '.' + image.format | url %}
+    {% image transform_url, image.filename %}
+</a> #}
+{%- endif -%}
+{%- endfor -%}
+</div>
