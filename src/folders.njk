@@ -1,0 +1,20 @@
+---
+title: Fahrzeuge
+permalink: fahrzeuge/index.html
+description: Unsere Fahrzeuge
+layout: base
+keywords:
+  - Page
+---
+<h1>{{ title }}</h1>
+<div class="container">
+  {% for folder in cloudinary.folders %}
+      <a class="card" href="/{{ folder.path }}" title="{{ folder.name }}">
+        {% for image in folder.images | limit(1) %}
+          {% thumb image.secure_url, folder.name %}
+          {# <img src="{{ item.url }}" alt="{{ folder.name }}"> #}
+        {% endfor %}
+        <span class="title">{{ folder.name }}</span>
+      </a>
+  {% endfor %}
+</div>

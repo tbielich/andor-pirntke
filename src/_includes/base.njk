@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Andor Pirntke | {{ title }}</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    {% if description -%}
+    <meta name="description" content="{{ description }}"/>
+    {%- endif %}
+    {% if keywords -%}
+      <meta name="keywords" content="{{ keywords }}"/>
+    {% endif %}
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:url" content="{{ url }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ thumbnail }}">
+
+    <link rel="stylesheet" type="text/css" href="/base.css"/>
+    <link rel="icon" href="/_assets/favicon.ico" type="image/x-icon" />
+
+  </head>
+  <body>
+    <nav>
+      <a href="/">Andor Pirntke</a> |
+      <a href="/fahrzeuge/">Fahrzeuge</a>
+    </nav>
+    <main>
+    {{ content | safe }}
+    </main>
+  </body>
+</html>
