@@ -48,7 +48,19 @@ html {
   border-radius: var(--border-radius);
   overflow: hidden;
 }
-
+.row {
+  display: flex;
+}
+main {
+  white-space: nowrap;
+}
+.car {
+  background: #A12026;
+  height: 100%;
+}
+.car img {
+  height: 100%;
+}
 .card {
   text-decoration: none;
 }
@@ -61,4 +73,9 @@ html {
   width: 100%;
   height: auto;
   display: block;
+}
+
+nav {
+  position: fixed;
+  top: 0;
 }
