@@ -6,11 +6,23 @@
   --space-medium: .75rem;
   --space-large: 1rem;
   --border-radius: 1rem;
+  --color-primary: #A12026;
+  --color-primary-800: #691719;
 }
 
 html {
   font-size: 100%;
   font-family: monospace;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.center {
+  max-width: var(--max-gallery-width);
+  margin: auto;
+  width: 100%;
 }
 .container {
   max-width: var(--max-gallery-width);
@@ -41,7 +53,12 @@ html {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
-
+nav {
+  padding: var(--space-large);
+}
+nav a {
+  color: var(--color-primary);
+}
 .thumb {
   display: block;
   margin: var(--space-small);
@@ -51,15 +68,27 @@ html {
 .row {
   display: flex;
 }
-main {
+.address {
+  display: inline-block;
+  padding: var(--space-large);
   white-space: nowrap;
+  min-width: 320px;
 }
-.car {
-  background: #A12026;
-  height: 100%;
+main {
+  display: flex;
 }
-.car img {
+.image {
+  display: inline-block;
+  background: var(--color-primary);
   height: 100%;
+  margin: 0;
+  padding: var(--space-large);
+}
+.image img {
+  height: 480px;
+  max-height: 100vh;
+  padding: var(--space-large) var(--space-large) 0;
+  background: var(--color-primary-800);
 }
 .card {
   text-decoration: none;
@@ -73,9 +102,4 @@ main {
   width: 100%;
   height: auto;
   display: block;
-}
-
-nav {
-  position: fixed;
-  top: 0;
 }
