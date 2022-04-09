@@ -5,7 +5,7 @@
   --space-small: .5rem;
   --space-medium: 1rem;
   --space-large: 1.5rem;
-  --border-radius: 1rem;
+  --border-radius: .5rem;
   --color-primary: #A12026;
   --color-background: #fff;
   --color-primary-800: #691719;
@@ -18,6 +18,9 @@ html {
   font-size: 100%;
   font-family: monospace;
   padding: 0;
+}
+h1 {
+  margin: 0 0 var(--space-large);
 }
 body {
   margin: 0;
@@ -64,20 +67,34 @@ nav a {
   white-space: nowrap;
   min-width: 320px;
   background: var(--color-background);
+  border-radius: var(--border-radius);
 }
-main .center,
+.willkommen {
+  background: var(--color-primary-800);
+}
+.willkommen .center {
+  display: flex;
+}
+
 footer .center {
   display: flex;
 }
 main.fahrzeuge {
   background: var(--color-background);
 }
+footer {
+  padding: var(--space-large) 0;
+}
 footer .disclaimer {
   padding: var(--space-large);
 }
+main {
+  padding: var(--space-large) 0;
+
+}
 main figure {
   display: inline-block;
-  margin: var(--space-large);
+  margin: 0;
   overflow: hidden;
   background: var(--color-primary-800);
 }
