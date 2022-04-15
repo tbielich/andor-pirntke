@@ -19,46 +19,6 @@
   padding: 0;
 }
 
-html {
-  font-size: 100%;
-  font-family: monospace;
-  padding: 0;
-}
-
-h1 {
-  margin: 0 0 var(--space-large);
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--color-primary);
-  font-size: var(--font-size-medium);
-}
-
-header {
-  padding: 0 var(--space-medium);
-}
-
-main article {
-  padding: var(--space-large) ;
-}
-
-main figure {
-  display: inline-block;
-  margin: 0;
-  overflow: hidden;
-  background: var(--color-primary-800);
-}
-
-main figure img {
-  height: 480px;
-  vertical-align: bottom;
-}
-
-main figure figcaption {
-  color: var(--color-background);
-}
 
 a {
   color: var(--color-neutral-900);
@@ -83,14 +43,68 @@ small {
   font-size: var(--font-size-small);
 }
 
-nav {
+html {
+  font-size: 100%;
+  font-family: monospace;
+  padding: 0;
+}
+
+h1 {
+  margin: 0 0 var(--space-large);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-primary);
+  font-size: var(--font-size-medium);
+}
+
+header {
+  padding: 0 var(--space-medium);
+}
+
+header nav {
   padding: var(--space-medium) 0;
 }
 
-nav a {
+header nav a {
   color: var(--color-background);
   text-decoration: none;
   padding: 0 var(--space-medium);
+}
+
+main article {
+  padding: var(--space-large) var(--space-large) 0 var(--space-large);
+}
+
+main figure {
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-primary-800);
+}
+
+main figure img {
+  height: 480px;
+  vertical-align: bottom;
+}
+
+main figure figcaption {
+  color: var(--color-background);
+}
+
+main section {
+  gap: var(--space-medium) var(--space-medium);
+  display: grid;
+}
+
+main.base {
+  background: var(--color-primary-800);
+}
+main.base.fahrzeuge,
+main.base-folder {
+  background: var(--color-background);
 }
 
 aside {
@@ -113,6 +127,7 @@ footer article {
 .card {
   text-decoration: none;
 }
+
 .card .title {
   white-space: nowrap;
   display: block;
@@ -124,14 +139,6 @@ footer article {
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
-}
-
-.base {
-  background: var(--color-primary-800);
-}
-
-.base-folder {
-  background: var(--color-background);
 }
 
 picture {
@@ -147,9 +154,9 @@ picture img {
   height: auto;
   display: block;
 }
-main section {
-  gap: var(--space-medium) var(--space-medium);
-  display: grid;
+
+picture:hover {
+  box-shadow: 2px 2px 0 var(--color-primary), -2px -2px 0 var(--color-primary), 2px -2px 0 var(--color-primary), -2px 2px 0 var(--color-primary);
 }
 
 @media screen and (min-width: 640px) {

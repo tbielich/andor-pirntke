@@ -26,7 +26,7 @@
       <a href="/fahrzeuge/">Fahrzeuge</a>
     </nav>
   </header>
-  <main class="{{ layout }}">
+  <main class="{{ layout }} {{ title|slug }}">
     <div class="center">
       <aside class="address">
         <p class="chef">
@@ -43,7 +43,7 @@
           <span class="locality">Rehfelde Dorf</span>
         </a>
       </aside>
-      <article class="{{ title|slug }}">
+      <article>
         {{ content | safe }}
       </article>
     </div>
