@@ -29,11 +29,12 @@
       <a href="/fahrzeuge/">Fahrzeuge</a>
     </nav>
   </header>
-  <main class="{{ title|slug }}">
+  <main class="{{ title|slug }} {{ layout }}">
     <div class="center">
       {{ content | safe }}
     </div>
   </main>
+  {% block footer %}
   <hr>
   <footer>
     <div class="center">
@@ -69,6 +70,8 @@
         </p>
       </article>
     </footer>
-    </div>
+  </div>
+  {% endblock %}
+  {% block scripts %}{% endblock %}
 </body>
 </html>

@@ -2,35 +2,6 @@ require('dotenv').config();
 const slugify = require("slugify");
 const Image = require("@11ty/eleventy-img");
 
-async function imageShortcode(src, alt, sizes = "100vw") {
-  if (alt === undefined) {
-    // You bet we throw an error on missing alt (alt="" works okay)
-    throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
-  }
-
-  let metadata = await Image(src, {
-    widths: [320, 640, 1280],
-    formats: ['webp', 'jpeg'],
-    urlPath: '/fahrzeuge/_images/',
-    outputDir: './_site/fahrzeuge/_images/'
-  });
-
-  let lowsrc = metadata.jpeg[0];
-
-  return `<picture data-fullscreen="${metadata.url}">
-  ${Object.values(metadata).map(imageFormat => {
-    return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
-  }).join("\n")}
-  <img
-  src="${lowsrc.url}"
-  width="${lowsrc.width}"
-  height="${lowsrc.height}"
-  alt="${alt}"
-  loading="lazy"
-  decoding="async">
-  </picture>`;
-}
-
 async function thumbShortcode(src, alt, sizes = "100vw") {
   if (alt === undefined) {
     // You bet we throw an error on missing alt (alt="" works okay)
@@ -45,30 +16,29 @@ async function thumbShortcode(src, alt, sizes = "100vw") {
   });
 
   let lowsrc = metadata.jpeg[0];
+  let origsrc = src;
 
-  return `<picture class="thumb">
+  return `<picture class="thumb" data-fullscreen="${origsrc}">
   ${Object.values(metadata).map(imageFormat => {
     return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
   }).join("\n")}
   <img
-  src="${lowsrc.url}"
-  width="${lowsrc.width}"
-  height="${lowsrc.height}"
-  alt="${alt}"
-  loading="lazy"
-  decoding="async">
+    src="${lowsrc.url}"
+    width="${lowsrc.width}"
+    height="${lowsrc.height}"
+    alt="${alt}"
+    loading="lazy"
+    decoding="async">
   </picture>`;
 }
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   eleventyConfig.addNunjucksAsyncShortcode("thumb", thumbShortcode);
   eleventyConfig.addShortcode("res_endpoint", () => process.env.RES_ENDPOINT);
 
   eleventyConfig.addPassthroughCopy({
-    "./src/_includes/base.css": "./base.css"
-  });
-  eleventyConfig.addPassthroughCopy({
+    "./src/_includes/base.css": "./base.css",
+    "./src/_includes/base.js": "./base.js",
     "./src/_assets/": "./_assets/"
   });
 

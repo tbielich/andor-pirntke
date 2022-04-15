@@ -43,6 +43,7 @@ module.exports = async () => {
         newFolder.images = res.resources.map((resource) => {
           resource.path = (slugify(resource.public_id) + "." + resource.format);
           resource.folder = cars + "/" + resource.path.split('/')[1];
+          console.log(resource);
           return resource
         });
 

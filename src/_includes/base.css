@@ -115,6 +115,9 @@ main figure figcaption {
   display: block;
   padding: var(--space-small);
 }
+.thumb {
+  cursor: pointer;
+}
 .thumb img {
   width: 100%;
   height: auto;
@@ -131,6 +134,10 @@ main figure figcaption {
   width: 100%;
   gap: var(--space-medium) var(--space-medium);
   display: grid;
+}
+
+.base-folder {
+  background: var(--color-background);
 }
 
 @media screen and (min-width: 640px) {
