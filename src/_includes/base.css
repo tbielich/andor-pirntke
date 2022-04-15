@@ -1,4 +1,3 @@
-
 :root {
   --image-width: 320px;
   --max-gallery-width: calc((var(--image-width) * 5) - (6 * var(--space-small)));
@@ -14,99 +13,103 @@
   --font-size-medium: 1rem;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 100%;
   font-family: monospace;
   padding: 0;
 }
+
 h1 {
   margin: 0 0 var(--space-large);
 }
+
 body {
   margin: 0;
   padding: 0;
   background: var(--color-primary);
   font-size: var(--font-size-medium);
 }
+
 header {
-  /* background: var(--color-background); */
-  border-bottom: 1px solid var(--color-neutral-900);
-}
-hr {
-  background: var(--color-neutral-900);
-  border: 0;
-  height: 1px;
-  margin: 0;
-}
-small {
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: var(--font-size-small);
-
+  padding: 0 var(--space-medium);
 }
 
-nav {
-  padding: var(--space-large);
-}
-nav a {
-  color: var(--color-background);
-  text-decoration: none;
-}
-.thumb {
-  display: block;
-  margin: var(--space-small);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-}
-.row {
-  display: flex;
-}
-.address {
-  display: inline-block;
-  padding: var(--space-large);
-  white-space: nowrap;
-  min-width: 320px;
-  background: var(--color-background);
-  border-radius: var(--border-radius);
-}
-.willkommen {
-  background: var(--color-primary-800);
-}
-.willkommen .center {
-  display: flex;
+main article {
+  padding: var(--space-large) ;
 }
 
-footer .center {
-  display: flex;
-}
-main.fahrzeuge {
-  background: var(--color-background);
-}
-footer {
-  padding: var(--space-large) 0;
-}
-footer .disclaimer {
-  padding: var(--space-large);
-}
-main {
-  padding: var(--space-large) 0;
-
-}
 main figure {
   display: inline-block;
   margin: 0;
   overflow: hidden;
   background: var(--color-primary-800);
 }
+
 main figure img {
   height: 480px;
-  padding: var(--space-large) var(--space-large) 0 var(--space-large);
-
+  vertical-align: bottom;
 }
+
 main figure figcaption {
-  padding: var(--space-large) var(--space-large) 0 var(--space-large);
   color: var(--color-background);
 }
+
+a {
+  color: var(--color-neutral-900);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--color-primary-800);
+}
+
+hr {
+  background: var(--color-neutral-900);
+  border: 0;
+  height: 1px;
+  margin: 0;
+}
+
+small {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: var(--font-size-small);
+}
+
+nav {
+  padding: var(--space-medium) 0;
+}
+
+nav a {
+  color: var(--color-background);
+  text-decoration: none;
+  padding: 0 var(--space-medium);
+}
+
+aside {
+  display: block;
+  padding: var(--space-large);
+  white-space: nowrap;
+  background: var(--color-background);
+}
+
+small,
+p {
+  margin-bottom: var(--space-small);
+  display: block;
+}
+
+footer article {
+  padding: var(--space-large);
+}
+
 .card {
   text-decoration: none;
 }
@@ -115,49 +118,64 @@ main figure figcaption {
   display: block;
   padding: var(--space-small);
 }
-.thumb {
-  cursor: pointer;
-}
-.thumb img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+
 .center {
   max-width: var(--max-gallery-width);
   margin: 0 auto;
   width: 100%;
+  overflow: hidden;
 }
-.container {
-  max-width: var(--max-gallery-width);
-  margin: auto;
-  width: 100%;
-  gap: var(--space-medium) var(--space-medium);
-  display: grid;
+
+.base {
+  background: var(--color-primary-800);
 }
 
 .base-folder {
   background: var(--color-background);
 }
 
+picture {
+  display: block;
+  margin: var(--space-small);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+main section {
+  gap: var(--space-medium) var(--space-medium);
+  display: grid;
+}
+
 @media screen and (min-width: 640px) {
-  .container {
+  .center {
+    display: flex;
+  }
+  main section {
     grid-template-columns: 1fr 1fr;
+  }
+  aside {
+    min-width: var(--image-width);
   }
 }
 
 @media screen and (min-width: 960px) {
-  .container {
+  main section {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media screen and (min-width: 1280px) {
-  .container {
+  main section {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 @media screen and (min-width: 1600px) {
-  .container {
+  main section {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }

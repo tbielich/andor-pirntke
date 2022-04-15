@@ -2,7 +2,6 @@
 <html lang="de">
 <head>
   <title>Andor Pirntke | {{ title }}</title>
-
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +16,8 @@
   <meta property="og:url" content="{{ url }}">
   <meta property="og:description" content="{{ description }}">
   <meta property="og:image" content="{{ thumbnail }}">
-
   <link rel="stylesheet" type="text/css" href="/base.css"/>
   <link rel="icon" href="/_assets/favicon.ico" type="image/x-icon" />
-
 </head>
 <body>
   <header>
@@ -29,16 +26,32 @@
       <a href="/fahrzeuge/">Fahrzeuge</a>
     </nav>
   </header>
-  <main class="{{ title|slug }} {{ layout }}">
+  <main class="{{ layout }}">
     <div class="center">
-      {{ content | safe }}
+      <aside class="address">
+        <p class="chef">
+          <small class="org">Kaufmann</small>
+          <h1 class="fn">Andor Pirntke</h1>
+        </p>
+        <p>
+          <a class="email" href="mailto:mail@andor-pirntke.de">mail@<br>andor-pirntke.de</a><br>
+          <a class="tel" href="+49015110658761">0151-10 65 87 61</a>
+        </p>
+        <a class="adr" href="https://goo.gl/maps/JESntGeeLzUoTZ7n9" title="Google" target="_blank" rel="nofollow">
+          <span class="street-address">Lagerstrasse 1</span><br>
+          <span class="postal-code">15345</span>
+          <span class="locality">Rehfelde Dorf</span>
+        </a>
+      </aside>
+      <article class="{{ title|slug }}">
+        {{ content | safe }}
+      </article>
     </div>
   </main>
   {% block footer %}
-  <hr>
   <footer>
     <div class="center">
-      <article class="address">
+      <aside>
         <small>Inhaber der Seite</small>
         <p>
           Andor Pirntke<br/>
@@ -55,8 +68,8 @@
           Gerichtsstand: Strausberg<br/>
           Ust-IdNr: DE217635989
         </p>
-      </article>
-      <article class="disclaimer">
+      </aside>
+      <article>
         <small>Urheberrecht</small>
         <p>
           Alle Inhalte dieser Internetseiten unterliegen dem Copyright. Die Veröffentlichung oder Verwendung von Texten und / oder Bildmaterial darf nur nach vorhergehender schriftlicher Genehmigung erfolgen.
