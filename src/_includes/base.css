@@ -79,7 +79,8 @@ main article {
 }
 
 main figure {
-  display: inline-block;
+  position: relative;
+  display: block;
   margin: 0;
   overflow: hidden;
   background: var(--color-primary-800);
@@ -88,6 +89,11 @@ main figure {
 main figure img {
   height: 480px;
   vertical-align: bottom;
+  margin-left: 100%;
+}
+main figure.intersected img {
+  margin-left: 0;
+  transition: all ease-in-out 1000ms;
 }
 
 main figure figcaption {
@@ -176,13 +182,19 @@ picture:hover {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 @media screen and (min-width: 1280px) {
   main section {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
 @media screen and (min-width: 1600px) {
   main section {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .row-2 {
+    grid-template-columns: 1fr 1fr;
   }
 }

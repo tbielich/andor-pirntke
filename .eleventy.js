@@ -39,6 +39,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./src/_includes/base.css": "./base.css",
     "./src/_includes/base.js": "./base.js",
+    "./src/_includes/animate.js": "./animate.js",
     "./src/_assets/": "./_assets/"
   });
 
