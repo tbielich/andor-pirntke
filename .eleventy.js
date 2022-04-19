@@ -33,6 +33,13 @@ async function thumbShortcode(src, alt, sizes = "100vw") {
 }
 
 module.exports = function(eleventyConfig) {
+  // eleventyConfig.addCollection('posts', collections => {
+  //       // get all posts by tag 'post'
+  //       return collections.getFilteredByGlob("src/**/*.md")
+  //         // exclude all ungenerated
+  //         .filter(post => Boolean(post.data.permalink))
+  //     });
+
   eleventyConfig.addNunjucksAsyncShortcode("thumb", thumbShortcode);
   eleventyConfig.addShortcode("res_endpoint", () => process.env.RES_ENDPOINT);
 

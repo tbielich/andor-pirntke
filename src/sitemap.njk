@@ -1,0 +1,16 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+layout: null
+robots: noindex,nofollow
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for page in collections.pages -%}{% if page.robots != "noindex" %}
+  <url>
+    <loc>https://andor-pirntke.de{{ page.url | url }}</loc>
+    <lastmod>{{ page.date.toISOString() }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>{% endif %}{%- endfor %}
+</urlset>
