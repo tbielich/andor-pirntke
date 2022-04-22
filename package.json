@@ -11,7 +11,7 @@
   "version": "1.0.0",
   "main": ".eleventy.js",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0"
+    "@11ty/eleventy": "^1.0.1"
   },
   "scripts": {
     "start": "eleventy --serve --watch",

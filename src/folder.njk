@@ -17,7 +17,8 @@ keywords:
 <section>
   {%- for image in folder.images -%}
   {%- if image.folder == folder.path %}
-  {% thumb image.secure_url, image.asset_id %}
+  {% set watermark = env.RES_ENDPOINT + "co_rgb:00000075,l_text:Arial_48_bold:Andor-Pirntke_" + folder.name|slugify + ",g_south_east/v1625164956/" + image.public_id + "." + image.format %}
+  {% thumb image.secure_url, watermark %}
   {%- endif -%}
   {%- endfor -%}
 </section>

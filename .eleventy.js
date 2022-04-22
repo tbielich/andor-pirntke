@@ -16,9 +16,8 @@ async function thumbShortcode(src, alt, sizes = "100vw") {
   });
 
   let lowsrc = metadata.jpeg[0];
-  let origsrc = src;
 
-  return `<picture class="thumb" data-fullscreen="${origsrc}">
+  return `<picture class="thumb" data-fullscreen="${alt}">
   ${Object.values(metadata).map(imageFormat => {
     return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
   }).join("\n")}
@@ -41,8 +40,7 @@ module.exports = function(eleventyConfig) {
   //     });
 
   eleventyConfig.addNunjucksAsyncShortcode("thumb", thumbShortcode);
-  eleventyConfig.addShortcode("res_endpoint", () => process.env.RES_ENDPOINT);
-
+  eleventyConfig.addGlobalData('env', process.env);
   eleventyConfig.addPassthroughCopy({
     "./src/_includes/base.css": "./base.css",
     "./src/_includes/base.js": "./base.js",
