@@ -1,0 +1,83 @@
+backend:
+  name: git-gateway
+  branch: master
+  # name: github
+  # repo: thomasbielich/andor-pirntke-cms
+media_folder: "_src/_assets" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/_assets" # The src attribute for uploaded media will begin with /images/uploads
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
+site_url: https://andor-pirntke.netlify.app
+display_url: https://andor-pirntke.netlify.app
+logo_url: https://andor-pirntke.netlify.app/_assets/logos/andor-pirntke-wortmarke.svg
+locale: 'de'
+
+# Please run "npx netlify-cms-proxy-server" for local backend
+# local_backend: true
+# publish_mode: editorial_workflow
+
+collections:
+  - name: "page"
+    label: "Seite"
+    folder: "src/pages"
+    create: true
+    slug: "{{path}}"
+    fields:
+      - {label: "Pfad", name: "path", widget: "string"}
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Beschreibung (max. 320 Zeichen)", name: "description", widget: "string"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false}
+      - {label: "Hero-Image", name: "hero", widget: "image", required: false}
+      - {label: "Details", name: "body", widget: "markdown", required: false}
+      - widget: select
+        label: "Tags"
+        name: "tags"
+        multiple: true
+        create: true
+        options: ["Page"]
+  - label: "Einstellungen"
+    name: "settings"
+    editor:
+      preview: false
+    files:
+      - label: "Teaser"
+        name: "teaser"
+        file: "src/_data/teaser.yaml"
+        fields:
+          - label: Text
+            name: text
+            widget: markdown
+          - label: Figure
+            name: figure
+            widget: list
+            allow_add: true
+            collapsed: true
+            fields:
+              - label: Hersteller
+                name: manufacturer
+                widget: string
+              - label: Fahrzeugtyp
+                name: type
+                widget: string
+              - label: Baujahr
+                name: year
+                widget: string
+              - label: Bild
+                name: image
+                widget: image
+      - label: "Navigation"
+        name: "items"
+        file: "src/_data/navigation.yaml"
+        fields:
+          - label: Nav Items
+            name: items
+            widget: list
+            allow_add: true
+            collapsed: true
+            fields:
+              - { label: Title, name: text, widget: string }
+              - { label: URL, name: url, widget: string }

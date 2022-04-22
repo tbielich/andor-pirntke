@@ -1,17 +1,18 @@
 {
-  "dependencies": {
-    "@11ty/eleventy-img": "^1.0.0",
-    "cloudinary": "^1.25.2",
-    "dotenv": "^10.0.0",
-    "eleventy": "^1.0.6",
-    "slugify": "^1.6.3"
-  },
-  "name": "cloudinary-images",
+  "name": "Andor Pirntke",
   "description": "",
   "version": "1.0.0",
   "main": ".eleventy.js",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1"
+    "netlify-cms-app": "^2.14.12",
+    "netlify-cms-lib-widgets": "^1.6.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-img": "^1.0.0",
+    "slugify": "^1.6.3",
+    "cloudinary": "^1.25.2",
+    "dotenv": "^10.0.0"
   },
   "scripts": {
     "start": "eleventy --serve --watch",
@@ -20,13 +21,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tbielich/cloudinary-images.git"
+    "url": "git+https://github.com/tbielich/andor-pirntke.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tbielich/cloudinary-images/issues"
+    "url": "https://github.com/tbielich/andor-pirntke/issues"
   },
-  "homepage": "https://github.com/tbielich/cloudinary-images#readme"
+  "homepage": "https://github.com/tbielich/andor-pirntke#readme"
 }

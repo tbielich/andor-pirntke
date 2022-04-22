@@ -22,8 +22,9 @@
 <body>
   <header>
     <nav class="center">
-      <a href="/">Andor Pirntke</a> |
-      <a href="/fahrzeuge/">Fahrzeuge</a>
+      {% for item in navigation.items %}
+        <a tabindex="102" href="{{ item.url }}">{{ item.text }}</a>
+      {% endfor %}
     </nav>
   </header>
   <main class="{{ layout }} {{ title|slug }}">

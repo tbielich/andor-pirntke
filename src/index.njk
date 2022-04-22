@@ -6,11 +6,13 @@ tags: pages
 keywords:
   - Home
 ---
+{% for fig in teaser.figures %}
 <figure id="Fahrzeug">
   <figcaption>
-    <span title="Hersteller">Mercedes Benz</span><br/>
-    <span title="Typ">Vario</span><br/>
-    <span title="Baujahr">1996–2013</span><br/>
+    <span title="Hersteller">{{ fig.manufacturer }}</span><br/>
+    <span title="Typ">{{ fig.type }}</span><br/>
+    <span title="Baujahr">{{ fig.year }}</span><br/>
   </figcaption>
-  <img src="_assets/S-508-1974-H.svg" title="Löschgruppenfahrzeug"/>
+  <img src="{{ fig.image }}" title="{{ fig.type }}"/>
 </figure>
+{% endfor %}

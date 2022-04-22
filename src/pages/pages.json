@@ -1,0 +1,8 @@
+{
+    "layout": "base",
+    "permalink": "{{ path }}/index.html",
+    "date": "Last Modified",
+    "tags": [
+        "pages"
+    ]
+}

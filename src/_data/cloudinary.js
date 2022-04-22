@@ -44,7 +44,7 @@ module.exports = async () => {
           resource.fullscreen_url = process.env.RES_ENDPOINT + resource.public_id + "." + resource.format;
           resource.path = (slugify(resource.public_id) + "." + resource.format);
           resource.folder = cars + "/" + resource.path.split('/')[1];
-          console.log(resource);
+          // console.log(resource);
           return resource
         });
 

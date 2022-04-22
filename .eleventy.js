@@ -1,4 +1,5 @@
 require('dotenv').config();
+const yaml = require("js-yaml");
 const slugify = require("slugify");
 const Image = require("@11ty/eleventy-img");
 
@@ -47,7 +48,9 @@ module.exports = function(eleventyConfig) {
     "./src/_includes/animate.js": "./animate.js",
     "./src/_assets/": "./_assets/"
   });
-
+  eleventyConfig.addDataExtension("yaml", (contents) =>
+    yaml.safeLoad(contents)
+  );
   eleventyConfig.addFilter("slugify", function (str) {
     return slugify(str, {
       lower: true,
