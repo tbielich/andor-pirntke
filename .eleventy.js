@@ -43,6 +43,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("thumb", thumbShortcode);
   eleventyConfig.addGlobalData('env', process.env);
   eleventyConfig.addPassthroughCopy({
+    "./src/admin/preview.css": "./admin/preview.css",
+    "./src/admin/config.yml": "./admin/config.yml",
     "./src/_includes/base.css": "./base.css",
     "./src/_includes/base.js": "./base.js",
     "./src/_includes/animate.js": "./animate.js",

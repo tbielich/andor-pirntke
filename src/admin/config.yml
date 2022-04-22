@@ -13,7 +13,7 @@ slug:
 
 site_url: https://andor-pirntke.netlify.app
 display_url: https://andor-pirntke.netlify.app
-logo_url: https://andor-pirntke.netlify.app/_assets/logos/andor-pirntke-wortmarke.svg
+logo_url: https://andor-pirntke.netlify.app/_assets/favicon.svg
 locale: 'de'
 
 # Please run "npx netlify-cms-proxy-server" for local backend
