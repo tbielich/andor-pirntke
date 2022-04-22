@@ -48,7 +48,8 @@ module.exports = function(eleventyConfig) {
     "./src/_includes/base.css": "./base.css",
     "./src/_includes/base.js": "./base.js",
     "./src/_includes/animate.js": "./animate.js",
-    "./src/_assets/": "./_assets/"
+    "./src/_assets/": "./_assets/",
+    "./static/images/uploads": "./images/uploads/"
   });
   eleventyConfig.addDataExtension("yaml", (contents) =>
     yaml.safeLoad(contents)
