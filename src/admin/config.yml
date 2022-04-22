@@ -3,8 +3,8 @@ backend:
   branch: master
   # name: github
   # repo: thomasbielich/andor-pirntke-cms
-media_folder: "_src/_assets" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/_assets" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 slug:
   encoding: "ascii"
@@ -50,9 +50,9 @@ collections:
         fields:
           - label: Text
             name: text
-            widget: markdown
-          - label: Figure
-            name: figure
+            widget: string
+          - label: Figures
+            name: figures
             widget: list
             allow_add: true
             collapsed: true
