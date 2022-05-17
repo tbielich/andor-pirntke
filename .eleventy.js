@@ -44,8 +44,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addGlobalData('env', process.env);
   eleventyConfig.addPassthroughCopy({
     "./src/_includes/base.css": "./base.css",
-    "./src/_includes/base.js": "./base.js",
-    "./src/_includes/animate.js": "./animate.js",
+    "./src/scripts/base.js": "./base.js",
+    "./src/scripts/animate.js": "./animate.js",
     "./src/_assets/": "./_assets/",
     "./src/admin": "./admin",
     "./static": "./"

@@ -1,6 +1,6 @@
 const cloudName = "andor-pirntke"; // replace with your own cloud name
 const uploadPreset = "albfy8p6"; // replace with your own upload preset
-const newFolder = "Fahrzeuge";
+const myFolder = "Fahrzeuge";
 
 // Remove the comments from the code below to add
 // additional functionality.
@@ -15,9 +15,9 @@ const myWidget = cloudinary.createUploadWidget(
     uploadPreset: uploadPreset,
     // cropping: true, //add a cropping step
     // showAdvancedOptions: true,  //add advanced options (public_id and tag)
-    sources: [ "local", "url"], // restrict the upload sources to URL and local files
+    // sources: [ "local", "url"], // restrict the upload sources to URL and local files
     // multiple: false,  // restrict upload to a single file
-    folder: newFolder, // upload files to the specified folder
+    folder: myFolder, // upload files to the specified folder
     // tags: ["Fahrzeug", "Verkauf"], //add the given tags to the uploaded files
     // context: {alt: "user_uploaded"}, //add the given context data to the uploaded files
     // clientAllowedFormats: ["images"], //restrict uploading to image files only
@@ -35,11 +35,9 @@ const myWidget = cloudinary.createUploadWidget(
   }
 );
 
-
 document.getElementById("upload_widget").addEventListener(
   "click",
   function () {
-
     myWidget.open();
   },
   false
