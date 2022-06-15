@@ -42,3 +42,13 @@ document.getElementById("upload_widget").addEventListener(
   },
   false
 );
+
+document.getElementById("button_build").addEventListener(
+  "click",
+  function () {
+    const request = new XMLHttpRequest();
+      request.open("POST", "https://api.netlify.com/build_hooks/625c12cd93d2615f52d8a533");
+      request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      request.send("param=value");
+  }
+);
