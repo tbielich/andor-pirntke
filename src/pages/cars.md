@@ -1,7 +1,7 @@
 ---
-path: cars
-title: Cars
-description: Fahrzeuge
+path: fahrzeuge
+title: Fahrzeuge
+description: Unser Fahrzeuge im Verkauf
 tags:
   - Page
 ---
