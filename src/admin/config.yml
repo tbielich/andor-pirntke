@@ -42,7 +42,7 @@ collections:
         name: "media"
         multiple: false
         create: false
-        options: ["Fahrzeuge", "Fahrzeugteile"]
+        options: ["Fahrzeuge", "Ersatzteile"]
   - label: "Einstellungen"
     name: "settings"
     editor:

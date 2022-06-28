@@ -15,7 +15,7 @@
     {% endfor %}
   {% endif %}
 
-  {% if media == "Fahrzeugteile" %}
+  {% if media == "Ersatzteile" %}
     {% for folder in cloudinaryParts.folders %}
     <a class="card" href="/{{ folder.path }}" title="{{ folder.name }}">
       {% for image in folder.images | limit(1) %}

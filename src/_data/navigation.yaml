@@ -3,5 +3,5 @@ items:
     url: /
   - text: Fahrzeuge
     url: /fahrzeuge
-  - text: Fahrzeugteile
-    url: /fahrzeugteile
+  - text: Ersatzteile
+    url: /ersatzteile

@@ -1,10 +1,10 @@
 ---
 path: Ersatzteile
-media: Fahrzeugteile
+media: Ersatzteile
 layout: base-folders
-keywords: Fahrzeugteile
+keywords: Ersatzteile
 title: Ersatzteile
-images: Fahrzeugteile
+images: Ersatzteile
 description: Unsere Ersatzteile
 tags:
   - Page

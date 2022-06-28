@@ -6,7 +6,7 @@ cloudinary.config({
   secure: true
 });
 
-const media = "fahrzeugteile";
+const media = "ersatzteile";
 // const mods = "umbauten";
 // const images = { media: [], mods: [] };
 

@@ -6,14 +6,14 @@ cloudinary.config({
   secure: true
 });
 
-const cars = "fahrzeuge";
+const media = "fahrzeuge";
 // const mods = "umbauten";
-// const images = { cars: [], mods: [] };
+// const images = { media: [], mods: [] };
 
 module.exports = async () => {
   // get all image folder
   const subfolders = await cloudinary.api.sub_folders(
-    (cars), (err, result) => {
+    (media), (err, result) => {
       if (err) {
         console.error("ERROR:", err);
       }
@@ -31,7 +31,7 @@ module.exports = async () => {
       return await cloudinary.api.resources({
         resource_type: "image",
         type: "upload",
-        prefix: cars + "/" + folder.name,
+        prefix: media + "/" + folder.name,
         max_results: 100
       }, (err, result) => {
           if (err) {
@@ -43,7 +43,7 @@ module.exports = async () => {
         newFolder.images = res.resources.map((resource) => {
           resource.fullscreen_url = process.env.RES_ENDPOINT + resource.public_id + "." + resource.format;
           resource.path = (slugify(resource.public_id) + "." + resource.format);
-          resource.folder = cars + "/" + resource.path.split('/')[1];
+          resource.folder = media + "/" + resource.path.split('/')[1];
           // console.log(resource);
           return resource
         });
