@@ -5,5 +5,6 @@ description: Unsere Fahrzeugteile
 tags:
   - Page
 images: Fahrzeugteile
+media: Fahrzeugteile
 ---
 # FZ
