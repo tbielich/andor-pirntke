@@ -1,10 +1,12 @@
 ---
-path: fahrzeugteile
-title: Fahrzeugteile
-description: Unsere Fahrzeugteile
-images: Fahrzeugteile
+path: Ersatzteile
+media: Fahrzeuge
 layout: base-folders
-media: Fahrzeugteile
 keywords: Fahrzeugteile
+title: Ersatzteile
+images: Fahrzeugteile
+description: Unsere Ersatzteile
+tags:
+  - Page
 ---
-# Unser Fahrzeugteile zum Verkauf
+# Ersatzteil Verkauf
