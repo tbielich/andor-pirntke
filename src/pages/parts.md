@@ -1,6 +1,6 @@
 ---
 path: Ersatzteile
-media: Fahrzeuge
+media: Fahrzeugteile
 layout: base-folders
 keywords: Fahrzeugteile
 title: Ersatzteile
