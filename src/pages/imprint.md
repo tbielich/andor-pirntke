@@ -2,7 +2,8 @@
 path: impressum
 title: Impressum
 description: Impressum
-tags:
-  - Page
+layout: base
+keywords:
+  - Impressum
 ---
 Impressum

@@ -1,7 +1,10 @@
 ---
-path: cars
-title: Cars
+path: fahrzeuge
+title: Fahrzeuge
 description: Fahrzeuge
-tags:
-  - Page
+layout: base-folders
+media: Fahrzeuge
+keywords:
+  - Fahrzeuge
 ---
+# Unsere Fahrzeuge zum Verkauf

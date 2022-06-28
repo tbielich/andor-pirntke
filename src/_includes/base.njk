@@ -12,6 +12,7 @@
   {% if keywords -%}
   <meta name="keywords" content="{{ keywords }}"/>
   {% endif %}
+  <meta name="robots" content="{{ robots }}">
   <meta property="og:title" content="{{ title }}">
   <meta property="og:url" content="{{ url }}">
   <meta property="og:description" content="{{ description }}">
@@ -46,6 +47,7 @@
       </aside>
       <article>
         {{ content | safe }}
+        {% block cloudinary %}{% endblock %}
       </article>
     </div>
   </main>

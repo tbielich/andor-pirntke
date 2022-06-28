@@ -3,3 +3,7 @@ items:
     url: /
   - text: Fahrzeuge
     url: /fahrzeuge
+  - text: Fahrzeugteile
+    url: /fahrzeugteile
+  - text: Impressum
+    url: /impressum

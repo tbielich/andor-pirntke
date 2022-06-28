@@ -11,9 +11,9 @@ slug:
   clean_accents: true
   sanitize_replacement: "_"
 
-site_url: https://andor-pirntke.netlify.app
-display_url: https://andor-pirntke.netlify.app
-logo_url: https://andor-pirntke.netlify.app/_assets/favicon.svg
+site_url: https://andor-pirntke.de
+display_url: https://andor-pirntke.de
+logo_url: https://andor-pirntke.de/_assets/favicon.svg
 locale: 'de'
 
 # Please run "npx netlify-cms-proxy-server" for local backend
@@ -30,15 +30,19 @@ collections:
       - {label: "Pfad", name: "path", widget: "string"}
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Beschreibung (max. 320 Zeichen)", name: "description", widget: "string"}
-      - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false}
-      - {label: "Hero-Image", name: "hero", widget: "image", required: false}
-      - {label: "Details", name: "body", widget: "markdown", required: false}
+      - {label: "Inhalt", name: "body", widget: "markdown", required: false}
       - widget: select
         label: "Tags"
         name: "tags"
         multiple: true
         create: true
         options: ["Page"]
+      - widget: select
+        label: "Bilder"
+        name: "media"
+        multiple: false
+        create: false
+        options: ["Fahrzeuge", "Fahrzeugteile"]
   - label: "Einstellungen"
     name: "settings"
     editor:
