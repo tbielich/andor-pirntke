@@ -3,3 +3,5 @@ items:
     url: /
   - text: Fahrzeuge
     url: /fahrzeuge
+  - text: Toll
+    url: /
