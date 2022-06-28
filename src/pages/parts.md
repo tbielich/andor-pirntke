@@ -2,9 +2,10 @@
 path: fahrzeugteile
 title: Fahrzeugteile
 description: Unsere Fahrzeugteile
-layout: base-folders
+tags:
+  - Page
+images: Fahrzeugteile
 media: Fahrzeugteile
-keywords:
-- Fahrzeugteile
+keywords: Fahrzeugteile
 ---
-# Unsere Fahrzeugteile zum Verkauf
+# Unser Fahrzeugteile
