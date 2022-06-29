@@ -66,6 +66,9 @@
         {% endfor %}
       </aside>
       <article>
+        {% block title %}
+        <small>{{ title }}</small>
+        {% endblock %}
         {{ content | safe }}
         {% block media %}
 
@@ -110,7 +113,6 @@
         </article>
     </div>
   </main>
-  {% block footer %}
   <footer>
     <div class="center">
       <aside>
@@ -144,7 +146,6 @@
       </article>
     </footer>
   </div>
-  {% endblock %}
   {% block scripts %}
 
   {% endblock %}

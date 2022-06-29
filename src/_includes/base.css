@@ -21,7 +21,6 @@
   padding: 0;
 }
 
-
 a {
   color: var(--color-neutral-900);
   text-decoration: none;
@@ -43,6 +42,9 @@ small {
   text-transform: uppercase;
   font-weight: 800;
   font-size: var(--font-size-small);
+  letter-spacing: .1em;
+  margin-bottom: var(--space-medium);
+  display: block;
 }
 
 html {
@@ -58,12 +60,13 @@ h1 {
 body {
   margin: 0;
   padding: 0;
-  background: var(--color-primary);
+  background: var(--color-neutral-900);
   font-size: var(--font-size-medium);
 }
 
 header {
   padding: 0 var(--space-medium);
+  background: var(--color-primary);
 }
 
 header nav {
@@ -122,14 +125,17 @@ aside {
   background: var(--color-background);
 }
 
-small,
 p {
-  margin-bottom: var(--space-small);
+  margin-bottom: var(--space-medium);
   display: block;
 }
 
 footer article {
   padding: var(--space-large);
+  color: var(--color-neutral-400);
+}
+footer aside {
+  background: var(--color-neutral-400);
 }
 
 .card {
