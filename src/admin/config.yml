@@ -31,18 +31,20 @@ collections:
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Beschreibung (max. 320 Zeichen)", name: "description", widget: "string"}
       - {label: "Inhalt", name: "body", widget: "markdown", required: false}
-      - widget: select
-        label: "Tags"
-        name: "tags"
+      - label: "Keywords"
+        name: "keywords"
+        widget: select
         multiple: true
         create: true
-        options: ["Page"]
+        required: false
+        options: ["Fahrzeuge"]
       - widget: select
         label: "Bilder"
         name: "media"
+        required: false
         multiple: false
         create: false
-        options: ["Fahrzeuge", "Ersatzteile"]
+        options: ["Teaser", "Fahrzeuge", "Ersatzteile"]
   - label: "Einstellungen"
     name: "settings"
     editor:

@@ -32,9 +32,8 @@
     <div class="center">
       <aside class="address">
         {% for pers in contact.person %}
-        {% if pers.title == "Kaufmann" %}
-
-
+        {% set contact = "Fahrzeuge" %}
+        {% if pers.area == contact %}
         <p class="chef">
           <small class="org">{{ pers.title }}</small>
           <h1 class="fn">{{ pers.name }}</h1>
