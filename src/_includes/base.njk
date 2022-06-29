@@ -31,19 +31,27 @@
   <main class="{{ layout }} {{ title|slug }}">
     <div class="center">
       <aside class="address">
+        {% for pers in contact.person %}
+        {% if pers.title == "Kaufmann" %}
+
+
         <p class="chef">
-          <small class="org">Kaufmann</small>
-          <h1 class="fn">Andor Pirntke</h1>
+          <small class="org">{{ pers.title }}</small>
+          <h1 class="fn">{{ pers.name }}</h1>
         </p>
         <p>
-          <a class="email" href="mailto:mail@andor-pirntke.de">mail@<br>andor-pirntke.de</a><br>
-          <a class="tel" href="+49015110658761">0151-10 65 87 61</a>
+          <a class="email" href="mailto:{{ pers.mail }}">{{ pers.mail }}</a><br>
+          <a class="tel" href="+49{{ pers.tel }}">{{ pers.tel }}</a>
         </p>
-        <a class="adr" href="https://goo.gl/maps/JESntGeeLzUoTZ7n9" title="Google" target="_blank" rel="nofollow">
-          <span class="street-address">Lagerstrasse 1</span><br>
-          <span class="postal-code">15345</span>
-          <span class="locality">Rehfelde Dorf</span>
+        {% endif %}
+        {% endfor %}
+        {% for adr in imprint.address %}
+        <a class="adr" href="{{ adr.map }}" title="Google" target="_blank" rel="nofollow">
+          <span class="street-address">{{ adr.streetAddress }}</span><br>
+          <span class="postal-code">{{ adr.postalCode }}</span>
+          <span class="locality">{{ adr.locality }}</span>
         </a>
+        {% endfor %}
       </aside>
       <article>
         {{ content | safe }}

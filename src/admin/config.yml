@@ -99,6 +99,10 @@ collections:
               - { label: Name, name: name, widget: string }
               - { label: Mail, name: mail, widget: string }
               - { label: Tel, name: tel, widget: string }
+              - label: Ansprechpartner
+                name: area
+                widget: select
+                options: ["Fahrzeuge", "Ersatzteile"]
       - label: "Impressum"
         name: "imprint"
         file: "src/_data/imprint.yaml"
