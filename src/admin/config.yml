@@ -85,3 +85,33 @@ collections:
             fields:
               - { label: Title, name: text, widget: string }
               - { label: URL, name: url, widget: string }
+      - label: "Impressum"
+        name: "imprint"
+        file: "src/_data/imprint.yaml"
+        fields:
+          - label: Adresse
+            name: address
+            widget: list
+            allow_add: true
+            collapsed: true
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Strasse, name: street, widget: string }
+              - { label: Ort, name: city, widget: string }
+          - label: Mail
+            name: mail
+            widget: string
+          - label: Gerichtsstand
+            name: court
+            widget: string
+          - label: Ust-IdNr
+            name: vat
+            widget: string
+          - label: Artikel
+            name: articles
+            widget: list
+            allow_add: true
+            collapsed: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }

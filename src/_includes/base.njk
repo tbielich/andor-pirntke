@@ -57,30 +57,30 @@
       <aside>
         <small>Inhaber der Seite</small>
         <p>
-          Andor Pirntke<br/>
-          Lagerstrasse 1<br/>
-          15345 Rehfelde Dorf<br/>
+          {% for location in imprint.address %}
+            {{ location.name }}<br/>
+            {{ location.street }}<br/>
+            {{ location.city }}
+          {% endfor %}
         </p>
         <p>
-          mail@andor-pirntke.de
+          {{ imprint.mail }}
+        </p>
+        <br>
+        <p>
+          <small>Gerichtsstand</small>
+          {{ imprint.court }}
         </p>
         <p>
-          Gerichtsstand: Strausberg<br/>
-          Ust-IdNr: DE217635989
+          <small>Ust-IdNr</small>
+          {{ imprint.vat }}
         </p>
       </aside>
       <article>
-        <small>Urheberrecht</small>
-        <p>
-          Alle Inhalte dieser Internetseiten unterliegen dem Copyright. Die Veröffentlichung oder Verwendung von Texten und / oder Bildmaterial darf nur nach vorhergehender schriftlicher Genehmigung erfolgen.
-        </p>
-        <small>Haftungsausschluss</small>
-        <p>
-          Die Inhalte unserer Internetseiten werden mit größtmöglicher Sorgfalt zusammen-gestellt und ständig überprüft. Trotzdem kann auch uns mal ein Fehler unterlaufen. Jegliche Haftung für Schäden, die direkt oder indirekt aus der Nutzung dieser Internetseiten entstehen, schließen wir aus, soweit diese nicht auf Vorsatz oder grober Fahrlässigkeit beruhen.
-        </p>
-        <p>
-          Die Europaeische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie unter folgendem Link finden: http://ec.europa.eu/odr
-        </p>
+        {% for article in imprint.articles %}
+          <small>{{ article.title }}</small>
+          <p>{{ article.text }}</p>
+        {% endfor %}
       </article>
     </footer>
   </div>

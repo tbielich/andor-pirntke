@@ -32,7 +32,7 @@ module.exports = async () => {
         resource_type: "image",
         type: "upload",
         prefix: media + "/" + folder.name,
-        max_results: 100
+        max_results: 1
       }, (err, result) => {
           if (err) {
             console.error("ERROR:", err);
