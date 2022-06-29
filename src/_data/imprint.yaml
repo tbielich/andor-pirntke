@@ -13,8 +13,10 @@ articles:
       (OS) bereit, die Sie unter folgendem Link finden > http://ec.europa.eu/odr
 address:
   - name: Andor Pirntke
-    street: Lagerstrasse 1
-    city: 15345 Rehfelde Dorf
+    streetAddress: Lagerstrasse 1
+    postalCode: 15345
+    locality: 15345 Rehfelde Dorf
+    map: https://goo.gl/maps/JESntGeeLzUoTZ7n9
 mail: mail@andor-pirntke.de
 court: Strausberg
 vat: DE217635989

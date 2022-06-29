@@ -57,10 +57,11 @@
       <aside>
         <small>Inhaber der Seite</small>
         <p>
-          {% for location in imprint.address %}
-            {{ location.name }}<br/>
-            {{ location.street }}<br/>
-            {{ location.city }}
+          {% for adr in imprint.address %}
+            {{ adr.name }}<br/>
+            {{ adr.streetAddress }}<br/>
+            {{ adr.postalCode }}
+            {{ adr.locality }}
           {% endfor %}
         </p>
         <p>
