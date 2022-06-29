@@ -1,8 +1,7 @@
 {
-    "permalink": "{{ path }}/index.html",
     "date": "Last Modified",
     "robots": "all",
-    "layout": "base",
+    "layout": "base-folder",
     "tags": [
         "pages"
     ]

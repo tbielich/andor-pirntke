@@ -1,0 +1,14 @@
+---
+pagination:
+  data: cloudinary.folders
+  size: 1
+  alias: folder
+  resolve: values
+  tags: pages
+permalink: "{{ folder.path | slugify }}/"
+media: Fahrzeuge
+keywords:
+  - Fahrzeug
+---
+<small><a href="/fahrzeuge/">Fahrzeuge</a></small>
+<h1>{{ folder.name }}</h1>

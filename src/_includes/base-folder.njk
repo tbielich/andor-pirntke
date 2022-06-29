@@ -1,5 +1,15 @@
 {% set title = folder.name %}
 {% extends "base.njk" %}
+{% block media %}
+<section>
+  {%- for image in folder.images -%}
+  {%- if image.folder == folder.path %}
+  {% set watermark = "https://res.cloudinary.com/andor-pirntke/image/upload/" + "co_rgb:00000075,l_text:Arial_48_bold:Andor-Pirntke_" + folder.name|slugify + ",g_south_east/v1625164956/" + image.public_id + "." + image.format %}
+  {% thumb image.secure_url, watermark %}
+  {%- endif -%}
+  {%- endfor -%}
+</section>
+{% endblock %}
 {% block footer %}{% endblock %}
 {% block scripts %}
 <script type="text/javascript" src="/base.js" defer></script>

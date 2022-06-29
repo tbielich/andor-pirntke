@@ -20,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="/base.css"/>
   <link rel="icon" href="/_assets/favicon.ico" type="image/x-icon" />
 </head>
-<body>
+<body class="{{media}}">
   <header>
     <nav class="center">
       {% for item in navigation.items %}
@@ -31,9 +31,22 @@
   <main class="{{ layout }} {{ title|slug }}">
     <div class="center">
       <aside class="address">
+        {% if path == "/" %}
         {% for pers in contact.person %}
-        {% set contact = "Fahrzeuge" %}
-        {% if pers.area == contact %}
+        {% if pers.area == "Fahrzeuge" %}
+        <p class="chef">
+          <small class="org">{{ pers.title }}</small>
+          <h1 class="fn">{{ pers.name }}</h1>
+        </p>
+        <p>
+          <a class="email" href="mailto:{{ pers.mail }}">{{ pers.mail }}</a><br>
+          <a class="tel" href="+49{{ pers.tel }}">{{ pers.tel }}</a>
+        </p>
+          {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% for pers in contact.person %}
+        {% if pers.area == media %}
         <p class="chef">
           <small class="org">{{ pers.title }}</small>
           <h1 class="fn">{{ pers.name }}</h1>
@@ -54,8 +67,47 @@
       </aside>
       <article>
         {{ content | safe }}
-        {% block cloudinary %}{% endblock %}
-      </article>
+        {% block media %}
+
+        {% if media == "Teaser" %}
+          {% for fig in teaser.figures %}
+          <figure id="Fahrzeug">
+            <figcaption>
+              <span title="Hersteller">{{ fig.manufacturer }}</span><br/>
+              <span title="Typ">{{ fig.type }}</span><br/>
+              <span title="Baujahr">{{ fig.year }}</span><br/>
+            </figcaption>
+            <img src="{{ fig.image }}" title="{{ fig.type }}"/>
+          </figure>
+          {% endfor %}
+          <script type="text/javascript" src="/animate.js" defer></script>
+        {% endif %}
+
+        <section>
+          {% if media == "Fahrzeuge" %}
+            {% for folder in cloudinary.folders %}
+            <a class="card" href="/{{ folder.path }}" title="{{ folder.name }}">
+              {% for image in folder.images | limit(1) %}
+              {% thumb image.secure_url, folder.name %}
+              {% endfor %}
+              <span class="title">{{ folder.name }}</span>
+            </a>
+            {% endfor %}
+          {% endif %}
+
+          {% if media == "Ersatzteile" %}
+            {% for folder in cloudinaryParts.folders %}
+            <a class="card" href="/{{ folder.path }}" title="{{ folder.name }}">
+              {% for image in folder.images | limit(1) %}
+              {% thumb image.secure_url, folder.name %}
+              {% endfor %}
+              <span class="title">{{ folder.name }}</span>
+            </a>
+            {% endfor %}
+          {% endif %}
+          </section>
+          {% endblock %}
+        </article>
     </div>
   </main>
   {% block footer %}
@@ -94,7 +146,7 @@
   </div>
   {% endblock %}
   {% block scripts %}
-  <script type="text/javascript" src="/animate.js" defer></script>
+
   {% endblock %}
 </body>
 </html>
