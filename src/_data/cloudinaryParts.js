@@ -7,8 +7,6 @@ cloudinary.config({
 });
 
 const media = "ersatzteile";
-// const mods = "umbauten";
-// const images = { media: [], mods: [] };
 
 module.exports = async () => {
   // get all image folder
