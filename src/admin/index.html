@@ -13,5 +13,26 @@
   <script>
     CMS.registerPreviewStyle("preview.css");
   </script>
+
+  <section class="css-y7r3-AppHeader">
+    <div class="css-12b66la-AppHeaderContent">
+      <a href="https://app.netlify.com/sites/andor-pirntke/deploys" target="_blank" title="https://app.netlify.com/sites/andor-pirntke/deploys">
+        <img src="https://api.netlify.com/api/v1/badges/07a94688-a836-4305-bf6e-4dbaf0644236/deploy-status" alt="deploy-status">
+      </a>
+      <button type="button" name="button-build" id="button_build">Seite bauen</button>
+      <script type="text/javascript">
+        document.getElementById("button_build").addEventListener(
+          "click",
+          function () {
+            const request = new XMLHttpRequest();
+              request.open("POST", "https://api.netlify.com/build_hooks/625c12cd93d2615f52d8a533");
+              request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+              request.send("param=value");
+              console.log("Seite wird gebaut");
+          }
+        );
+      </script>
+    </div>
+  </section>
 </body>
 </html>

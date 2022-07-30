@@ -10,15 +10,16 @@ async function thumbShortcode(src, alt, sizes = "100vw") {
   }
 
   let metadata = await Image(src, {
-    widths: [320, 640],
+    widths: [320, 640, 1280],
     formats: ['webp', 'jpeg'],
     urlPath: '/fahrzeuge/_images/',
     outputDir: './_site/fahrzeuge/_images/'
   });
 
   let lowsrc = metadata.jpeg[0];
+  let fullscr = metadata.jpeg[2];
 
-  return `<picture class="thumb" data-fullscreen="${alt}">
+  return `<picture class="thumb" data-fullscreen="${fullscr.url}">
   ${Object.values(metadata).map(imageFormat => {
     return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
   }).join("\n")}
@@ -33,13 +34,6 @@ async function thumbShortcode(src, alt, sizes = "100vw") {
 }
 
 module.exports = function(eleventyConfig) {
-  // eleventyConfig.addCollection('posts', collections => {
-  //       // get all posts by tag 'post'
-  //       return collections.getFilteredByGlob("src/**/*.md")
-  //         // exclude all ungenerated
-  //         .filter(post => Boolean(post.data.permalink))
-  //     });
-
   eleventyConfig.addNunjucksAsyncShortcode("thumb", thumbShortcode);
   eleventyConfig.addGlobalData('env', process.env);
   eleventyConfig.addPassthroughCopy({
