@@ -6,10 +6,6 @@ keywords:
   - Fahrzeuge
 media: Fahrzeuge
 ---
-# Unsere Fahrzeuge zum Verkauf:
+# Unsere Fahrzeuge Angebot:
 
-<!--StartFragment-->
-
-<a href="https://www.ebay-kleinanzeigen.de/s-bestandsliste.html?userId=38330766">Anzeigen bei eBay-Kleinanzeigen</a>
-
-<!--EndFragment-->
+Weiter Informationen finden Sie in unseren  <!--StartFragment--><a href="https://www.ebay-kleinanzeigen.de/s-bestandsliste.html?userId=38330766">eBay-Kleinanzeigen</a><!--EndFragment-->.
