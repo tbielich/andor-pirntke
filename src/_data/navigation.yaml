@@ -5,5 +5,5 @@ items:
     url: /fahrzeuge
   - text: Ersatzteile
     url: /ersatzteile
-  - text: "Bundeswehr Material "
-    url: "/bundeswehr "
+  - text: Bundeswehr Material
+    url: /bundeswehr
