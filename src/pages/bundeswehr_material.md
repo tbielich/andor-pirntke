@@ -3,7 +3,7 @@ path: bundeswehr
 title: Bundeswehr Material
 description: Bundeswehr Material
 keywords: null
-media: Ersatzteile
+media: null
 ---
 # Unsere Bundeswehr Material Angebot:
 
