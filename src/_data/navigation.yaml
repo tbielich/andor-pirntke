@@ -1,11 +1,9 @@
 items:
+  - text: Ersatzteile
+    url: /ersatzteile
   - text: Andor Pirntke
     url: /
   - text: Fahrzeuge
     url: /fahrzeuge
-  - text: Ersatzteile
-    url: /ersatzteile
   - text: Bundeswehr
     url: /bundeswehr
-  - text: Test
-    url: /test
