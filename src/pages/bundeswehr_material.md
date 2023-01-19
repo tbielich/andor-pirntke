@@ -1,5 +1,5 @@
 ---
-path: Bundeswehr Material
+path: bundeswehr
 title: Bundeswehr Material
 description: Bundeswehr Material
 ---
