@@ -1,7 +1,7 @@
 ---
 path: bundeswehr
-title: Bundeswehr Material
-description: Bundeswehr Material
+title: Bundeswehr
+description: Bundeswehr
 keywords: null
 media: null
 ---
