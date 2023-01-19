@@ -2,6 +2,7 @@
 path: bundeswehr
 title: Bundeswehr Material
 description: Bundeswehr Material
+media: Ersatzteile
 ---
 # Unsere Bundeswehr Material Angebot:
 
