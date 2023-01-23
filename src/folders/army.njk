@@ -1,0 +1,14 @@
+---
+pagination:
+  data: cloudinaryArmy.folders
+  size: 1
+  alias: folder
+  resolve: values
+  tags: pages
+permalink: "{{ folder.path | slugify }}/"
+media: Budeswehr
+keywords:
+  - Bundeswehr
+---
+<small><a href="/bundeswehr/">Bundeswehr</a></small>
+<h1>{{ folder.name }}</h1>
