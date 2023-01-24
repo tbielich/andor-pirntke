@@ -1,7 +1,7 @@
 ---
 path: test
-title: test
-description: test
+title: Test
+description: Test
 media: null
 ---
 t﻿est
