@@ -9,3 +9,5 @@ items:
     url: /bundeswehr
   - text: Test
     url: /test
+  - text: Thomas
+    url: /thomas
