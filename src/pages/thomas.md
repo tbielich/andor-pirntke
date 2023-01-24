@@ -2,6 +2,6 @@
 path: Thomas
 title: Thomas
 description: Thomas
-media: Fahrzeuge
+media: Ersatzteile
 ---
 Thomas
