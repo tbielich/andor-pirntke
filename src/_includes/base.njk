@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <title>Andor Pirntke | {{ title }}</title>
+  <title>Andor Pirntke | {{ title }}</title>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,30 +85,6 @@
           {% endfor %}
           <script type="text/javascript" src="/animate.js" defer></script>
         {% endif %}
-
-        <section>
-          {% if media == "Fahrzeuge" %}
-            {% for folder in cloudinary.folders %}
-            <a class="card" href="/{{ folder.path }}" title="{{ folder.name }}">
-              {% for image in folder.images | limit(1) %}
-              {% thumb image.secure_url, folder.name %}
-              {% endfor %}
-              <span class="title">{{ folder.name }}</span>
-            </a>
-            {% endfor %}
-          {% endif %}
-
-          {% if media == "Ersatzteile" %}
-            {% for folder in cloudinaryParts.folders %}
-            <a class="card" href="/{{ folder.path }}" title="{{ folder.name }}">
-              {% for image in folder.images | limit(1) %}
-              {% thumb image.secure_url, folder.name %}
-              {% endfor %}
-              <span class="title">{{ folder.name }}</span>
-            </a>
-            {% endfor %}
-          {% endif %}
-          </section>
           {% endblock %}
         </article>
     </div>
@@ -126,16 +102,16 @@
           {% endfor %}
         </p>
         <p>
-          {{ imprint.mail }}
+          {{ imprint.mail }}
         </p>
         <br>
         <p>
           <small>Gerichtsstand</small>
-          {{ imprint.court }}
+          {{ imprint.court }}
         </p>
         <p>
           <small>Ust-IdNr</small>
-          {{ imprint.vat }}
+          {{ imprint.vat }}
         </p>
       </aside>
       <article>
