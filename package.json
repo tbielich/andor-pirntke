@@ -1,5 +1,5 @@
 {
-  "name": "Andor Pirntke",
+  "name": "andorpirntke",
   "description": "",
   "version": "1.0.0",
   "main": ".eleventy.js",
@@ -10,7 +10,6 @@
   "dependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-img": "^1.0.0",
-    "cloudinary": "^1.25.2",
     "dotenv": "^10.0.0",
     "fs": "^0.0.1-security",
     "slugify": "^1.6.3"
